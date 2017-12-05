@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="cardFormView" customModule="FantasticView" customModuleProvider="target">
+            <connections>
+                <outlet property="cardHolderNameField" destination="OjC-ee-8lk" id="OYK-7n-ESg"/>
+                <outlet property="cardNumberField" destination="AXk-zH-szS" id="FIG-p3-7Bw"/>
+                <outlet property="cardSchemeImage" destination="YMA-KP-wmp" id="DyS-s6-hOI"/>
+                <outlet property="ccvField" destination="msi-jw-K2P" id="e1u-8f-rZs"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aPY-hs-AxC"/>
+                <outlet property="expirationDateField" destination="hVy-FT-sMP" id="hCv-YV-cfg"/>
+                <outlet property="lblVCardH" destination="JTS-RH-XGJ" id="amh-1P-zqN"/>
+                <outlet property="lblVNo" destination="BxS-Hl-idB" id="ewb-Vi-Gmx"/>
+                <outlet property="lblVccv" destination="ght-V6-sSo" id="a57-C7-lTF"/>
+                <outlet property="lblVdate" destination="rDb-ef-7WD" id="nRd-wl-XoV"/>
+                <outlet property="lblerr" destination="6Yu-FC-IQo" id="90Z-qR-4Qc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="267"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Cardholder Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OjC-ee-8lk">
+                    <rect key="frame" x="16" y="72" width="251" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="MM / YY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVy-FT-sMP">
+                    <rect key="frame" x="16" y="125" width="80" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="DateChanged:" destination="-1" eventType="editingChanged" id="BbU-CX-FFJ"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="CCV" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msi-jw-K2P">
+                    <rect key="frame" x="187" y="125" width="80" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXk-zH-szS">
+                    <rect key="frame" x="16" y="20" width="199" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="cardNumberChanged:" destination="-1" eventType="editingChanged" id="k0I-tp-QgP"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxS-Hl-idB" userLabel="Card Number Validation Label">
+                    <rect key="frame" x="16" y="50" width="251" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTS-RH-XGJ" userLabel="Card Holder Name Validation Lavel">
+                    <rect key="frame" x="16" y="103" width="251" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-ef-7WD" userLabel="Card Expiration Validation Label">
+                    <rect key="frame" x="16" y="163" width="121" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ght-V6-sSo" userLabel="CCV Validation Label">
+                    <rect key="frame" x="145" y="162" width="122" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yu-FC-IQo" userLabel="Gateway Validation Label">
+                    <rect key="frame" x="16" y="192" width="251" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17T-Re-PiP">
+                    <rect key="frame" x="163" y="221" width="104" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                    <state key="normal" title="Submit"/>
+                    <connections>
+                        <action selector="cardSubmitPressed:" destination="-1" eventType="touchUpInside" id="oxo-nb-0g2"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_default" translatesAutoresizingMaskIntoConstraints="NO" id="YMA-KP-wmp" userLabel="Card Scheme Image">
+                    <rect key="frame" x="215" y="20" width="52" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.62937286196546083" blue="0.99409357024530465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="20" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_default" width="168" height="112"/>
+    </resources>
+</document>
