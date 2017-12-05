@@ -21,7 +21,7 @@
 	<key>NSPrincipalClass</key>
 	<string></string>
 	<key>UIMainStoryboardFile</key>
-	<string></string>
+	<string>cardForm1</string>
 	<key>urls</key>
 	<dict>
 		<key>production</key>
