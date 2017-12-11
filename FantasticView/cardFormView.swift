@@ -55,25 +55,26 @@ class cardFormView: UIView, UITextFieldDelegate{
     
     @IBAction func cardNumberChanged(_ sender: UITextField) {
         let (cardType, _, cardValid) = checkCardNumber(input: cardNumberField.text!)
+        let bundle = Bundle(for: type(of: self))
         mCardType = cardType
         switch cardType {
         case .Amex:
-            cardSchemeImage.image = UIImage(named: "ic_amex")
+            cardSchemeImage.image =  UIImage(named: "ic_amex", in: bundle, compatibleWith: nil)
             break
         case .Visa:
-            cardSchemeImage.image = UIImage(named: "ic_visa")
+            cardSchemeImage.image = UIImage(named: "ic_visa", in: bundle, compatibleWith: nil)
             break
         case .MasterCard:
-            cardSchemeImage.image = UIImage(named: "ic_mastercard")
+            cardSchemeImage.image = UIImage(named: "ic_mastercard", in: bundle, compatibleWith: nil)
             break
         case .Diners:
-            cardSchemeImage.image = UIImage(named: "ic_diners")
+            cardSchemeImage.image = UIImage(named: "ic_diners", in: bundle, compatibleWith: nil)
             break
         case .UnionPay:
-            cardSchemeImage.image = UIImage(named: "ic_cup")
+            cardSchemeImage.image = UIImage(named: "ic_cup", in: bundle, compatibleWith: nil)
             break
         default:
-            cardSchemeImage.image = UIImage(named: "ic_default")
+            cardSchemeImage.image = UIImage(named: "ic_default", in: bundle, compatibleWith: nil)
             break
         }
         
