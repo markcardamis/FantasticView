@@ -36,27 +36,21 @@ class cardFormView: UIView, UITextFieldDelegate{
 
     private func commonInit() {
         //Bundle.main.loadNibNamed("cardForm", owner: self, options: nil)
-        let podBundle = Bundle(for: cardFormView.self)
-        if let bundleURL = podBundle.url(forResource: "FantasticView", withExtension: "bundle") {
-            if let bundle = Bundle(url: bundleURL) {
-                let cellNib = UINib(nibName: "cardForm", bundle: bundle)
-                //self.collectionView!.registerNib(cellNib, forCellWithReuseIdentifier: "cardForm")
-            } else {
-                assertionFailure("Could not load the bundle")
-            }
-        } else {
-            assertionFailure("Could not create a path to the bundle")
-        }
-        addSubview(contentView)
+        contentView = loadViewFromNib()
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(contentView)
         cardNumberField.delegate = self
         expirationDateField.delegate = self
         ccvField.delegate = self
     }
     
-    @IBAction func cardSubmitPressed(_ sender: Any) {
-        //getToken()
+    func loadViewFromNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "cardForm", bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        
+        return view
     }
     
     @IBAction func cardNumberChanged(_ sender: UITextField) {

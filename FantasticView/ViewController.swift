@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cardFormView: cardFormView!
     @IBOutlet weak var Submit: UIButton!
+    var profile: cardFormView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
