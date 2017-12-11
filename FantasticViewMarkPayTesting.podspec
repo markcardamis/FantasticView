@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FantasticViewMarkPayTesting'
-  s.version          = '0.1.8'
+  s.version          = '0.2.0'
   s.summary          = 'By far the most fantastic view I have seen in my entire life. No joke.'
  
   s.description      = <<-DESC
@@ -15,5 +15,10 @@ This fantastic view changes its color gradually makes your app look fantastic!
   s.ios.deployment_target = '10.0'
   s.source_files = 'FantasticView/**/*.{h,m}', 'FantasticView/**/*.swift'
   s.resources = 'FantasticView/Assets.xcassets', 'FantasticView/**/*.xib'
+  s.resource_bundles = {
+      'FantasticView' => [
+          'FantasticView/**/*.{storyboard,xib,xcassets,json,imageset,png}'
+      ]
+  }
   s.exclude_files = 'FantasticView/ViewController.swift'
 end

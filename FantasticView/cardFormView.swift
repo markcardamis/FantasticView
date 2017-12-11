@@ -33,9 +33,20 @@ class cardFormView: UIView, UITextFieldDelegate{
         super.init(coder: aDecoder)
         commonInit()
     }
-    
+
     private func commonInit() {
-        Bundle.main.loadNibNamed("cardForm", owner: self, options: nil)
+        //Bundle.main.loadNibNamed("cardForm", owner: self, options: nil)
+        let podBundle = Bundle(for: cardFormView.self)
+        if let bundleURL = podBundle.url(forResource: "FantasticView", withExtension: "bundle") {
+            if let bundle = Bundle(url: bundleURL) {
+                let cellNib = UINib(nibName: "cardForm", bundle: bundle)
+                //self.collectionView!.registerNib(cellNib, forCellWithReuseIdentifier: "cardForm")
+            } else {
+                assertionFailure("Could not load the bundle")
+            }
+        } else {
+            assertionFailure("Could not create a path to the bundle")
+        }
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
