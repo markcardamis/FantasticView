@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol GetTokenDelegate: class {    // <-- needs :class for weak
+public protocol GetTokenDelegate: class {    // <-- needs :class for weak
     func getToken()
 }
 
