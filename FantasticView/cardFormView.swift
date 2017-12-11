@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol GetTokenDelegate: class {    // <-- needs :class for weak
+    func getToken()
+}
+
 class cardFormView: UIView, UITextFieldDelegate{
     @IBOutlet var contentView: UIView!
     
@@ -23,6 +27,11 @@ class cardFormView: UIView, UITextFieldDelegate{
     
     var autoInsertDateSlash = true
     var mCardType: CardType = .Unknown
+    
+    weak var delegate: GetTokenDelegate?
+    func signInUIButtonH(sender: UIButton) {
+        delegate?.getToken()    // <-- call the delegate
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
