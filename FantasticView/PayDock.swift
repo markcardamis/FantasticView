@@ -36,7 +36,8 @@ public class PayDock {
     /// returns paydock base url
     final var url: String {
         get {
-            if let infoPlist = Bundle.init(identifier: "com.roundtableapps.PayDock")?.infoDictionary, let urls = infoPlist["urls"] as? [String: Any] {
+             let bundleID = Bundle.main.bundleIdentifier!
+            if let infoPlist = Bundle.init(identifier: bundleID)?.infoDictionary, let urls = infoPlist["urls"] as? [String: Any] {
                 if isSandbox {
                     return urls["sandbox"] as? String ?? ""
                 }

@@ -8,11 +8,7 @@
 
 import UIKit
 
-public protocol GetTokenDelegate: class {    // <-- needs :class for weak
-    func getToken()
-}
-
-class cardFormView: UIView, UITextFieldDelegate{
+public class cardFormView: UIView, UITextFieldDelegate{
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var cardSchemeImage: UIImageView!
@@ -28,23 +24,17 @@ class cardFormView: UIView, UITextFieldDelegate{
     var autoInsertDateSlash = true
     var mCardType: CardType = .Unknown
     
-    weak var delegate: GetTokenDelegate?
-    func signInUIButtonH(sender: UIButton) {
-        delegate?.getToken()    // <-- call the delegate
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
 
     private func commonInit() {
-        //Bundle.main.loadNibNamed("cardForm", owner: self, options: nil)
         contentView = loadViewFromNib()
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -58,7 +48,6 @@ class cardFormView: UIView, UITextFieldDelegate{
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "cardForm", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        
         return view
     }
     
@@ -117,7 +106,7 @@ class cardFormView: UIView, UITextFieldDelegate{
     let allowedDateCharacters = "0123456789/"
     let allowedCardCharacters = "0123456789"
     
-    func textField(_ textFieldToChange: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textFieldToChange: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textFieldToChange == expirationDateField {
             let nsText = textFieldToChange.text!
             let startingLength = textFieldToChange.text?.count ?? 0
@@ -195,7 +184,7 @@ class cardFormView: UIView, UITextFieldDelegate{
         return true
     }
     
-    func getToken (publicKey: String, gatewayId: String, completion: @escaping ((String) -> Void)) {
+    public func getToken (publicKey: String, gatewayId: String, sandbox: Bool, completion: @escaping ((String) -> Void)) {
         clearErrors()
         var valid = true
 
@@ -204,28 +193,28 @@ class cardFormView: UIView, UITextFieldDelegate{
         
         if (cardHolderNameField.text == "") {
             valid = false
-            lblVCardH.text="Name is required";
+            lblVCardH.text = ConstantsUi.cardNameIsRequired;
         }
         
         if (validCardNumber == false) {
             valid = false
-            lblVNo.text="Card number invalid";
+            lblVNo.text = ConstantsUi.cardNumberIsInvalid;
         }
         if (validDateNumber == false) {
             valid = false
-            lblVdate.text="Expiration error";
+            lblVdate.text = ConstantsUi.expiryIsInvalid;
         }
         
         if (((mCardType == CardType.Amex) && (ccvField.text!.count != 4)) ||
         ((mCardType != CardType.Amex) && (ccvField.text!.count != 3))) {
             valid = false
-            lblVccv.text="CCV error";
+            lblVccv.text = ConstantsUi.securityCodeInvalid;
         }
         
         if(valid) {
             PayDock.setSecretKey(key: "")
             PayDock.setPublicKey(key: publicKey)
-            PayDock.shared.isSandbox = true
+            PayDock.shared.isSandbox = sandbox
             
             let address = Address(line1: "one", line2: "two", city: "city", postcode: "1234", state: "state", country: "AU")
             let card = Card(gatewayId: gatewayId,
