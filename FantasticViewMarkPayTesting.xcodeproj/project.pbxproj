@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99378FF91FE0AC7B0069CD05 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99464F341FD66B42005406F9 /* Info.plist */; };
+		99378FFD1FE125FC0069CD05 /* info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99378FFC1FE125FC0069CD05 /* info1.plist */; };
 		99464F291FD66B42005406F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F281FD66B42005406F9 /* AppDelegate.swift */; };
 		99464F491FD66B42005406F9 /* FantasticViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F481FD66B42005406F9 /* FantasticViewUITests.swift */; };
 		99B1E7BF1FD6DC800054B6E5 /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E619881FD69054006CC547 /* PayDock.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99378FFC1FE125FC0069CD05 /* info1.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info1.plist; sourceTree = "<group>"; };
 		99464F251FD66B42005406F9 /* FantasticViewMarkPayTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasticViewMarkPayTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99464F281FD66B42005406F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99464F2A1FD66B42005406F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				99E6199F1FD69137006CC547 /* cardForm1.storyboard */,
 				99464F281FD66B42005406F9 /* AppDelegate.swift */,
 				99464F341FD66B42005406F9 /* Info.plist */,
+				99378FFC1FE125FC0069CD05 /* info1.plist */,
 			);
 			path = FantasticView;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99378FF91FE0AC7B0069CD05 /* Info.plist in Resources */,
+				99378FFD1FE125FC0069CD05 /* info1.plist in Resources */,
 				99E619A01FD69137006CC547 /* LaunchScreen.storyboard in Resources */,
 				99E61A121FD6B67A006CC547 /* cardForm.xib in Resources */,
 				99E619A11FD69137006CC547 /* cardForm1.storyboard in Resources */,
