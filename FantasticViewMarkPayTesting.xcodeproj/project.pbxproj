@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99378FF91FE0AC7B0069CD05 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99464F341FD66B42005406F9 /* Info.plist */; };
 		99464F291FD66B42005406F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F281FD66B42005406F9 /* AppDelegate.swift */; };
 		99464F491FD66B42005406F9 /* FantasticViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F481FD66B42005406F9 /* FantasticViewUITests.swift */; };
 		99B1E7BF1FD6DC800054B6E5 /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E619881FD69054006CC547 /* PayDock.swift */; };
@@ -74,12 +75,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99464F251FD66B42005406F9 /* FantasticView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasticView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99464F251FD66B42005406F9 /* FantasticViewMarkPayTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasticViewMarkPayTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99464F281FD66B42005406F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99464F2A1FD66B42005406F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99464F341FD66B42005406F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99464F391FD66B42005406F9 /* FantasticViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasticViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99464F441FD66B42005406F9 /* FantasticViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasticViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99464F391FD66B42005406F9 /* FantasticViewMarkPayTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasticViewMarkPayTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99464F441FD66B42005406F9 /* FantasticViewMarkPayTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasticViewMarkPayTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99464F481FD66B42005406F9 /* FantasticViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasticViewUITests.swift; sourceTree = "<group>"; };
 		99464F4A1FD66B42005406F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99E6197F1FD69053006CC547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,9 +164,9 @@
 		99464F261FD66B42005406F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99464F251FD66B42005406F9 /* FantasticView.app */,
-				99464F391FD66B42005406F9 /* FantasticViewTests.xctest */,
-				99464F441FD66B42005406F9 /* FantasticViewUITests.xctest */,
+				99464F251FD66B42005406F9 /* FantasticViewMarkPayTesting.app */,
+				99464F391FD66B42005406F9 /* FantasticViewMarkPayTestingTests.xctest */,
+				99464F441FD66B42005406F9 /* FantasticViewMarkPayTestingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,9 +313,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99464F241FD66B42005406F9 /* FantasticView */ = {
+		99464F241FD66B42005406F9 /* FantasticViewMarkPayTesting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99464F4D1FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticView" */;
+			buildConfigurationList = 99464F4D1FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTesting" */;
 			buildPhases = (
 				99464F211FD66B42005406F9 /* Sources */,
 				99464F221FD66B42005406F9 /* Frameworks */,
@@ -324,14 +325,14 @@
 			);
 			dependencies = (
 			);
-			name = FantasticView;
+			name = FantasticViewMarkPayTesting;
 			productName = FantasticView;
-			productReference = 99464F251FD66B42005406F9 /* FantasticView.app */;
+			productReference = 99464F251FD66B42005406F9 /* FantasticViewMarkPayTesting.app */;
 			productType = "com.apple.product-type.application";
 		};
-		99464F381FD66B42005406F9 /* FantasticViewTests */ = {
+		99464F381FD66B42005406F9 /* FantasticViewMarkPayTestingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99464F501FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewTests" */;
+			buildConfigurationList = 99464F501FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTestingTests" */;
 			buildPhases = (
 				99464F351FD66B42005406F9 /* Sources */,
 				99464F361FD66B42005406F9 /* Frameworks */,
@@ -342,14 +343,14 @@
 			dependencies = (
 				99464F3B1FD66B42005406F9 /* PBXTargetDependency */,
 			);
-			name = FantasticViewTests;
+			name = FantasticViewMarkPayTestingTests;
 			productName = FantasticViewTests;
-			productReference = 99464F391FD66B42005406F9 /* FantasticViewTests.xctest */;
+			productReference = 99464F391FD66B42005406F9 /* FantasticViewMarkPayTestingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		99464F431FD66B42005406F9 /* FantasticViewUITests */ = {
+		99464F431FD66B42005406F9 /* FantasticViewMarkPayTestingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99464F531FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewUITests" */;
+			buildConfigurationList = 99464F531FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTestingUITests" */;
 			buildPhases = (
 				99464F401FD66B42005406F9 /* Sources */,
 				99464F411FD66B42005406F9 /* Frameworks */,
@@ -360,9 +361,9 @@
 			dependencies = (
 				99464F461FD66B42005406F9 /* PBXTargetDependency */,
 			);
-			name = FantasticViewUITests;
+			name = FantasticViewMarkPayTestingUITests;
 			productName = FantasticViewUITests;
-			productReference = 99464F441FD66B42005406F9 /* FantasticViewUITests.xctest */;
+			productReference = 99464F441FD66B42005406F9 /* FantasticViewMarkPayTestingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -391,7 +392,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 99464F201FD66B42005406F9 /* Build configuration list for PBXProject "FantasticView" */;
+			buildConfigurationList = 99464F201FD66B42005406F9 /* Build configuration list for PBXProject "FantasticViewMarkPayTesting" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -404,9 +405,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99464F241FD66B42005406F9 /* FantasticView */,
-				99464F381FD66B42005406F9 /* FantasticViewTests */,
-				99464F431FD66B42005406F9 /* FantasticViewUITests */,
+				99464F241FD66B42005406F9 /* FantasticViewMarkPayTesting */,
+				99464F381FD66B42005406F9 /* FantasticViewMarkPayTestingTests */,
+				99464F431FD66B42005406F9 /* FantasticViewMarkPayTestingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -416,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99378FF91FE0AC7B0069CD05 /* Info.plist in Resources */,
 				99E619A01FD69137006CC547 /* LaunchScreen.storyboard in Resources */,
 				99E61A121FD6B67A006CC547 /* cardForm.xib in Resources */,
 				99E619A11FD69137006CC547 /* cardForm1.storyboard in Resources */,
@@ -509,12 +511,12 @@
 /* Begin PBXTargetDependency section */
 		99464F3B1FD66B42005406F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 99464F241FD66B42005406F9 /* FantasticView */;
+			target = 99464F241FD66B42005406F9 /* FantasticViewMarkPayTesting */;
 			targetProxy = 99464F3A1FD66B42005406F9 /* PBXContainerItemProxy */;
 		};
 		99464F461FD66B42005406F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 99464F241FD66B42005406F9 /* FantasticView */;
+			target = 99464F241FD66B42005406F9 /* FantasticViewMarkPayTesting */;
 			targetProxy = 99464F451FD66B42005406F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -667,7 +669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasticView.app/FantasticView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasticViewMarkPayTesting.app/FantasticViewMarkPayTesting";
 			};
 			name = Debug;
 		};
@@ -683,7 +685,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasticView.app/FantasticView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasticViewMarkPayTesting.app/FantasticViewMarkPayTesting";
 			};
 			name = Release;
 		};
@@ -720,7 +722,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		99464F201FD66B42005406F9 /* Build configuration list for PBXProject "FantasticView" */ = {
+		99464F201FD66B42005406F9 /* Build configuration list for PBXProject "FantasticViewMarkPayTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99464F4B1FD66B42005406F9 /* Debug */,
@@ -729,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99464F4D1FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticView" */ = {
+		99464F4D1FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99464F4E1FD66B42005406F9 /* Debug */,
@@ -738,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99464F501FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewTests" */ = {
+		99464F501FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTestingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99464F511FD66B42005406F9 /* Debug */,
@@ -747,7 +749,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99464F531FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewUITests" */ = {
+		99464F531FD66B42005406F9 /* Build configuration list for PBXNativeTarget "FantasticViewMarkPayTestingUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99464F541FD66B42005406F9 /* Debug */,

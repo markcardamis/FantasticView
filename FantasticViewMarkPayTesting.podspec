@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FantasticViewMarkPayTesting'
-  s.version          = '0.2.7'
+  s.version          = '0.2.8'
   s.summary          = 'By far the most fantastic view I have seen in my entire life. No joke.'
  
   s.description      = <<-DESC
