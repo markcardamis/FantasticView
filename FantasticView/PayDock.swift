@@ -36,12 +36,15 @@ public class PayDock {
     /// returns paydock base url
     final var url: String {
         get {
-             let bundleID = Bundle.main.bundleIdentifier!
-            if let infoPlist = Bundle.init(identifier: bundleID)?.infoDictionary, let urls = infoPlist["urls"] as? [String: Any] {
-                if isSandbox {
-                    return urls["sandbox"] as? String ?? ""
+            let bundle = Bundle(for: type(of: self))
+            if let path = bundle.path(forResource: "Info1", ofType: "plist") {
+                if let myDict = NSDictionary(contentsOfFile: path), let urls = myDict["urls"] as? [String: Any] {
+                    if isSandbox {
+                        return urls["sandbox"] as? String ?? ""
+                    }
+                    return urls["production"] as? String ?? ""
                 }
-                return urls["production"] as? String ?? ""
+                return ""
             }
             return ""
         }
