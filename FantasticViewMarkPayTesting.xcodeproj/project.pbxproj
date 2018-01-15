@@ -10,10 +10,6 @@
 		99378FFD1FE125FC0069CD05 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99378FFC1FE125FC0069CD05 /* Info1.plist */; };
 		99464F291FD66B42005406F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F281FD66B42005406F9 /* AppDelegate.swift */; };
 		99464F491FD66B42005406F9 /* FantasticViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F481FD66B42005406F9 /* FantasticViewUITests.swift */; };
-		99B1E7BF1FD6DC800054B6E5 /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E619881FD69054006CC547 /* PayDock.swift */; };
-		99B1E7C01FD6DC810054B6E5 /* PayDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E619881FD69054006CC547 /* PayDock.swift */; };
-		99B1E7C11FD6DC870054B6E5 /* cardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E61A131FD6BF3A006CC547 /* cardFormView.swift */; };
-		99B1E7C21FD6DC870054B6E5 /* cardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E61A131FD6BF3A006CC547 /* cardFormView.swift */; };
 		99D545D21FD6D85B00CE63E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99464F2A1FD66B42005406F9 /* ViewController.swift */; };
 		99E6198F1FD69054006CC547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E6197F1FD69053006CC547 /* Assets.xcassets */; };
 		99E619911FD69054006CC547 /* ExternalCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E619811FD69054006CC547 /* ExternalCheckout.swift */; };
@@ -493,8 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B1E7C11FD6DC870054B6E5 /* cardFormView.swift in Sources */,
-				99B1E7BF1FD6DC800054B6E5 /* PayDock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99464F491FD66B42005406F9 /* FantasticViewUITests.swift in Sources */,
-				99B1E7C21FD6DC870054B6E5 /* cardFormView.swift in Sources */,
-				99B1E7C01FD6DC810054B6E5 /* PayDock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

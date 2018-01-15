@@ -239,10 +239,8 @@ public class cardFormView: UIView, UITextFieldDelegate{
                 (token) in
                 do {
                     let token: String = try token()
-                    print(token)
                     completion(token)
                 } catch let error {
-                    debugPrint(error)
                     completion(error.localizedDescription)
                 }
             }
